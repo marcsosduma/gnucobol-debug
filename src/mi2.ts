@@ -622,7 +622,7 @@ export class MI2 extends EventEmitter implements IDebugger {
      * The comand executes the function, then pauses at the next line outside.
      */
     stepOut(): Thenable<boolean> {
-        this.lastStepCommand = this.stepOut;
+        this.lastStepCommand = this.stepOver;
         if (this.verbose) {
             this.log("stderr", "stepOut");
         }
